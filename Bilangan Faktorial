@@ -1,0 +1,38 @@
+package bilanganfaktorial;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class BilanganFaktorial {
+public static int faktorial (int n){
+        if (n == 1){
+            return 1;
+    }else{
+            return (n * faktorial (n -1));
+        }
+} 
+    public static String getString  () throws IOException {
+      BufferedReader br = new BufferedReader
+                (new InputStreamReader (System.in));
+        String inp = br.readLine ();
+        return inp;
+    }  
+    public static int getInt () throws IOException {
+        int inp2 = Integer.parseInt (getString ());
+        return inp2;
+    }
+ public static void main(String[] args) { 
+try {
+            int jawab ;
+            int bilangan;
+            
+            System.out.println ("Masukan Sebuah Bilangan : ");
+            bilangan = getInt ();
+            jawab = faktorial (bilangan);
+            System.out.println ("Bilangan Faktorial dari "+bilangan+" = "+jawab);
+        } catch (Exception e){
+            System.out.println ("Erorrrr!!!");    
+        }
+    }
+}
